@@ -20,3 +20,17 @@ function writeCards(names, eventName) {
 
 // const listOfNotes = (writeCards(['effie', 'simp', 'code'], 'gift'));
 // console.log(listOfNotes);
+
+
+//write a function, countDown, that takes in any positive integer and,
+// starting from that number, counts down to zero using console.log()
+function countDown(int) {
+    while (int >= 0) {
+        console.log(int);
+        int--;
+    }
+    return int;
+}
+
+const nums = countDown(10);
+console.log(nums);
