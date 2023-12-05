@@ -1,17 +1,22 @@
 // hello for loop 🤩
+// func returns an array of thank you messages for each name provided to the function
 
-function writeCards(arr, name) {
+function writeCards(names, eventName) {
+    let thankYouMessages = [];
 
-    arr = [];
-    for(i = 0; i < arr.length; i++) {
-        console.log(`Thankyou ${arr[i]} for your ${name}.`);
-
-        return arr;
-        debugger;
+    if (!Array.isArray(names)) {
+      return 'Please provide an array of names.';
     }
 
-    const newarr = [arr];
-    return newarr;
-}
+    names.forEach(name => {
+      let message = `Thank you, ${name}, for the wonderful ${eventName} gift!`;
+      thankYouMessages.push(message);
+    });
 
-writeCards(['effie', 'simp', 'code'], 'service');
+    return thankYouMessages;
+  }
+
+// test the function
+
+// const listOfNotes = (writeCards(['effie', 'simp', 'code'], 'gift'));
+// console.log(listOfNotes);
